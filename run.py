@@ -1,7 +1,7 @@
 import random
 
 # Define categories and words for each category
-countries = ["nigeira", "england", "ireland", "spain", "italy", "france"]
+countries = ["nigeria", "england", "ireland", "spain", "italy", "france"]
 
 hangman = ['''
     +---+
