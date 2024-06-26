@@ -9,21 +9,95 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
     ]
 
-CREDS = Credentials.from_service_account_file('creds.json')
-SCOPED_CREDS = CREDS.with_scopes(SCOPE)
-GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
-SHEET = GSPREAD_CLIENT.open('Hangman')
-file = open('word.txt', 'r', encoding='utf-8')
-print(file.read())
-def get_answer_from_file():
-    """
-    Open text file and get random word for the game answer.
-    """
-    file = open('word.txt', 'r', encoding='utf-8')
-    lines = file.read().splitlines()
-    random_word = random.choice(lines)
-    return random_word.lower()
+def logo():
+     logo = r"""
+            +---+
+            |  |
+            O  |
+           /|\ |
+           / \ |
+               |
+        ========="""
+# Open the file in read mode 
+with open("word.txt", "r") as file: 
+        allText = file.read() 
+        words = list(map(str, allText.split())) 
+        random_word = random.choice(words).lower()
+        # print random_word string 
+        print(random_word)
+        def choice(words, level):
+            if words == random_word:
+                easy_choice = [word for word in words if len(word) <= 5]
+                medium_choice = [word for word in words if 6 <= len(word) <= 8]
+                hard_choice = [word for word in words if len(word) > 8]
 
+
+                if level == "easy" and easy_choice:
+                    return random.choice(easy_words)
+
+                elif level == "medium" and medium_choice:
+                    return random.choice(medium_choice)
+
+                elif level == "hard" and hard_choice:
+                    return random.choice(hard_choice)
+
+                else:
+                    print("No words available for the selected level")
+                    return None
+            else:
+                print("Invalid word.")
+                return None
+
+# Function to display hangman
+def hangman(wrong):
+    if wrong == 0:
+        print("\n+---+")
+        print("    |")
+        print("    |")
+        print("    |")
+        print("   ===")
+    elif wrong == 1:
+        print(r"""
+                +---+
+                O   |
+                    |
+                    |
+                ===""")
+    elif wrong == 2:
+        print(r"""
+                +---+
+                O   |
+                |   |
+                    |
+                ===""")
+    elif wrong == 3:
+        print(r"""
+                +---+
+                O  |
+                /|  |
+                    |
+                ===""")
+    elif wrong == 4:
+        print(r"""
+                +---+
+                O  |
+                /|\ |
+                    |
+                ===""")
+    elif wrong == 5:
+        print(r"""
+                +---+
+                O  |
+                /|\ |
+                /   |
+                ===""")
+    else:
+        print(r"""
++---+
+ O  |
+/|\ |
+/ \ |
+   ===""")
 # Define categories and words for each category
 
 
