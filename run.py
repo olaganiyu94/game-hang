@@ -1,4 +1,5 @@
 import random
+import fontstyle
 import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
@@ -73,31 +74,51 @@ def hangman(wrong):
     elif wrong == 3:
         print(r"""
                 +---+
-                O  |
+                 O  |
                 /|  |
                     |
                 ===""")
     elif wrong == 4:
         print(r"""
                 +---+
-                O  |
+                 O  |
                 /|\ |
                     |
                 ===""")
     elif wrong == 5:
         print(r"""
                 +---+
-                O  |
+                 O  |
                 /|\ |
                 /   |
                 ===""")
     else:
         print(r"""
-+---+
- O  |
-/|\ |
-/ \ |
-   ===""")
-# Define categories and words for each category
+            +---+
+             O  |
+            /|\ |
+            / \ |
+            ===""")
 
 
+def game_play():
+    text = pyfiglet.figlet_format(
+            "How to play\n "
+            "fill the blank\n "
+            "Guess the letters in the word.\n"
+            "You have 6 attempts to guess the word correctly.\n"
+            "For each incorrect guess, a part of the hangman will be drawn.\n"
+            "If you guess the word correctly, you win!"
+            "drawing the entire hangman, the players lose and the game is over.\n"
+            "Good Luck", justify="center", width=80)
+    print(text)
+    print("Welcome to Hangman!")
+    logo()  # print logo
+
+    # check name for validation 
+    while True:
+        name = input("Enter your name: ")
+        if name.strip():  # Check name if empty
+            break
+        else:
+            print("Please enter a valid name.")
