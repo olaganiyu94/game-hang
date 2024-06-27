@@ -10,22 +10,23 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
     ]
 
-def logo():
-     logo = r"""
-            +---+
-            |  |
-            O  |
-           /|\ |
-           / \ |
-               |
-        ========="""
+def print_logo():
+    logo = r"""
+ +---+
+ |  |
+ O  |
+/|\ |
+/ \ |
+    |
+----------------------------------------------"""
+    print(logo)
+
 # Open the file in read mode 
 with open("word.txt", "r") as file: 
         allText = file.read() 
         words = list(map(str, allText.split())) 
         random_word = random.choice(words).lower()
         # print random_word string 
-        print(random_word)
         def choice(words, level):
             if words == random_word:
                 easy_choice = [word for word in words if len(word) <= 5]
@@ -102,23 +103,34 @@ def hangman(wrong):
 
 
 def game_play():
-    text = pyfiglet.figlet_format(
-            "How to play\n "
-            "fill the blank\n "
-            "Guess the letters in the word.\n"
-            "You have 6 attempts to guess the word correctly.\n"
-            "For each incorrect guess, a part of the hangman will be drawn.\n"
-            "If you guess the word correctly, you win!"
-            "drawing the entire hangman, the players lose and the game is over.\n"
-            "Good Luck", justify="center", width=80)
-    print(text)
     print("Welcome to Hangman!")
-    logo()  # print logo
-
+    print_logo()
+    
     # check name for validation 
     while True:
         name = input("Enter your name: ")
         if name.strip():  # Check name if empty
+            print(f"\nHello {name}, Time to play hangman! \n")
             break
         else:
             print("Please enter a valid name.")
+     # Input validation for level
+    while True:
+        print("================================"
+                  "================================================")
+        print("Choose a level:")
+        print("1. Easy")
+        print("2. Medium")
+        print("3. Hard")
+        level_choice = input("Enter the level number: ").strip()
+        if level_choice.isdigit() and 1 <= int(level_choice) <= 3:
+            levels = ["easy", "medium", "hard"]
+            level = levels[int(level_choice) - 1]
+            break
+        else:
+            print("Invalid choice. Please enter a valid number.")
+
+        choice(words,level)
+        if not words:
+            return
+game_play()
