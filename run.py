@@ -30,30 +30,31 @@ def word_choice():
     random_word = random.choice(words).lower()
     return random_word
         # print random_word string 
-def choice(word, level):
-    if word in word_choice():
-        words = word_choice()
-        easy_choice = [word for word in words if len(word) <= 5]
-        medium_choice = [word for word in words if 6 <= len(word) <= 8]
-        hard_choice = [word for word in words if len(word) > 8]
+def choice(level):
+    print(level)
+    words = word_choice()
+    # easy_choice = [word for word in words if len(word) <= 5]
+    # medium_choice = [word for word in words if 5 > len(word) <= 9]
+    # hard_choice = [word for word in words if len(word) > 10  ]
+   # print(hard_choice)
 
 
-        if level == "easy" and easy_choice:
-            return random.choice(easy_words)
+    if level == "easy" :
+       print("level easy")
+       return random.choice([word for word in words if len(word) <= 5])
 
-        elif level == "medium" and medium_choice:
-            return random.choice(medium_choice)
+    if level == "medium" and medium_choice:
+       print("medium level")
+       return random.choice(medium_choice)
 
-        elif level == "hard" and hard_choice:
-            return random.choice(hard_choice)
+    if level == "hard":
+       print("hard level")
+       print("hard level")
+       return random.choice([word for word in words if len(word) > 10  ])
 
-        else:
-                    print("No words available for the selected level")
-                    return None
-    else:
-        print("Invalid word.")
-        return None
-
+    #else:
+       # print("No words available for the selected level")
+        #return None
 # Function to display hangman
 def hangman(wrong):
     if wrong == 0:
@@ -129,12 +130,13 @@ def game_play():
         level_choice = input("Enter the level number: ").strip()
         if level_choice.isdigit() and 1 <= int(level_choice) <= 3:
             levels = ["easy", "medium", "hard"]
-            level = levels[int(level_choice) - 1]
+            level = levels[int(level_choice) -1]  #levels[int(level_choice) - 1]
+            
             break
         else:
             print("Invalid choice. Please enter a valid number.")
 
-    choice1 = choice(word,level)
+    choice1 = choice(level)
     if not choice1:
         return
 
