@@ -146,17 +146,14 @@ def game_play():
 
     while live > 0 and '_' in guess:
         # Display current progress
-        print("am here1")
-        print(choice1)
         print(" ".join(guess))
-        print("am here2")
         print("Incorrect letters: ", ", ".join(incorrectLetter))
         hangman(6 - live)  # Display the hangman
         print(f"Live left: {live}")
-        guesses = input("Guess a letter: ").lower()
+        guesses = input("Guess a letter: \n").lower()
                 # Validate the guess
         if len(guesses) != 1 or not guesses.isalpha():
-            print("Please enter a single letter.")
+            print("Please enter a single letter.\n")
             continue
         if guesses in guessLetter:
             print("You've already guessed that letter.")
@@ -178,6 +175,6 @@ def game_play():
         print(f"Congratulations, {name}! You've guessed the word:", choice1)
         print("am here")
     else:
-        print("Game over, you lose! The word was:", choice1)
+        print("Game over, you lose! The word was: \n", choice1)
         print_hangman(6)  # Display the last hanged man when losing
 game_play()
