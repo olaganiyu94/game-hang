@@ -32,16 +32,16 @@ def word_choice():
         # print random_word string 
 def choice(level):
     print(level)
-    words = word_choice()
-    # easy_choice = [word for word in words if len(word) <= 5]
-    # medium_choice = [word for word in words if 5 > len(word) <= 9]
-    # hard_choice = [word for word in words if len(word) > 10  ]
-   # print(hard_choice)
+    words = word_choice(random_word)
+    easy_choice = [word for word in words if len(word) <= 5]
+    medium_choice = [word for word in words if 5 > len(word) <= 9]
+    hard_choice = [word for word in words if len(word) > 10  ]
+    print(hard_choice)
 
 
     if level == "easy" :
        print("level easy")
-       return random.choice([word for word in words if len(word) <= 5])
+       return random.choice(easy_choice)
 
     if level == "medium" and medium_choice:
        print("medium level")
@@ -49,8 +49,7 @@ def choice(level):
 
     if level == "hard":
        print("hard level")
-       print("hard level")
-       return random.choice([word for word in words if len(word) > 10  ])
+       return random.choice(hard_choice)
 
     #else:
        # print("No words available for the selected level")
@@ -143,7 +142,7 @@ def game_play():
     guessLetter = []
     incorrectLetter= []
     live = 6
-    guess =['_']*len(choice1)
+    guess =['_']*len(word_choice(random_word))
 
     while live > 0 and '_' in guess:
         # Display current progress
