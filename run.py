@@ -130,18 +130,11 @@ def game_play():
      # Main game loop
     while live > 0 and '_' in guess_word:
         # Display current progress
-        print("--------------Fill in the Blank-------------------")
         print(" ".join(guess_word))
-        if live == 6:
-            print("Let Play: ", ", ".join(incorrectLetter))
-            hangman(6 - live)  # Display the hangman
-            print(f"Tries left: {live}")
-            guess = input("Guess a letter: \n").lower()
-        else:
-            print("Incorrect Letters: ", ", ".join(incorrectLetter))
-            hangman(6 - live)  # Display the hangman
-            print(f"Tries left: {live}")
-            guess = input("Guess a letter: \n").lower()
+        print("Let Play: ", ", ".join(incorrectLetter))
+        hangman(6 - live)  # Display the hangman
+        print(f"Tries left: {live}")
+        guess = input("Guess a letter: \n").lower()
         # Validate the guess
         if len(guess) != 1 or not guess.isalpha():
             print("Please enter a single letter.")
@@ -150,9 +143,8 @@ def game_play():
         if guess in guessLetter:
             print("You've already guessed that letter.")
             continue
-
             # Check if the guessed letter is in the word
-            guessLetter.append(guess)
+        guessLetter.append(guess)
 
         if guess in answer:
             for i in range(len(answer)):
@@ -174,8 +166,8 @@ def game_play():
 
     # Ask if the player wants to play again
     play_again = input("Do you want to play again? (yes/no):\n ").lower()
+
     if play_again != "yes":
-        
         print(pyfiglet.figlet_format(
                 "GOODBYE", justify="center", width=80))
         print(f"Thank you for playing, {name}! Have a nice day!")
