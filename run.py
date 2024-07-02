@@ -1,5 +1,6 @@
 import random
 import fontstyle
+import pyfiglet
 import pandas as pd
 import gspread
 from google.oauth2.service_account import Credentials
@@ -101,7 +102,9 @@ def hangman(wrong):
 
 
 def game_play():
-    print("Welcome to Hangman!")
+    styled_text=pyfiglet.figlet_format('Welcome to Hangman !',font= 'doom')
+    print(styled_text)
+    #print("Welcome to Hangman!")
     print_logo()
     
     # check name for validation 
@@ -172,6 +175,9 @@ def game_play():
     # Ask if the player wants to play again
     play_again = input("Do you want to play again? (yes/no):\n ").lower()
     if play_again != "yes":
+        
+        print(pyfiglet.figlet_format(
+                "GOODBYE", justify="center", width=80))
         print(f"Thank you for playing, {name}! Have a nice day!")
         return
     if play_again == "yes":
