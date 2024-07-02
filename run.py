@@ -31,8 +31,6 @@ def word_choice(word2):
     word2 =random.choice(words).lower()
     return word2
     # print random string 
-
-print_logo()
   
 # def level(word, choice):
 #     option = word_choice(word)
@@ -117,22 +115,30 @@ def game_play():
 
     word1 =""
     answer = word_choice(word1)
+    if not answer:
+        return
     print("------------------------------------------")
-    print(answer)
+    print("--------------Game Start-------------------")
     guessLetter = []
     incorrectLetter= []
     live = 6
-    guess_word =['_']*len(word_choice(answer))
+    guess_word =['_']*len(answer)
 
      # Main game loop
     while live > 0 and '_' in guess_word:
         # Display current progress
+        print("--------------Fill in the Blank-------------------")
         print(" ".join(guess_word))
-        print("Incorrect letters: ", ", ".join(incorrectLetter))
-        hangman(6 - live)  # Display the hangman
-        print(f"Tries left: {live}")
-        guess = input("Guess a letter: ").lower()
-
+        if live == 6:
+            print("Let Play: ", ", ".join(incorrectLetter))
+            hangman(6 - live)  # Display the hangman
+            print(f"Tries left: {live}")
+            guess = input("Guess a letter: \n").lower()
+        else:
+            print("Incorrect Letters: ", ", ".join(incorrectLetter))
+            hangman(6 - live)  # Display the hangman
+            print(f"Tries left: {live}")
+            guess = input("Guess a letter: \n").lower()
         # Validate the guess
         if len(guess) != 1 or not guess.isalpha():
             print("Please enter a single letter.")
@@ -158,15 +164,19 @@ def game_play():
         # Game result
     if '_' not in guess_word:
         print(f"Congratulations, {name}! You've guessed the word:", answer)
+        ("-------------------WELL DONE-------------------------")
     else:
         print("Game over, you lose! The word was:", answer)
         hangman(6)  # Display the last hanged man when losing
 
     # Ask if the player wants to play again
-    play_again = input("Do you want to play again? (yes/no): ").lower()
+    play_again = input("Do you want to play again? (yes/no):\n ").lower()
     if play_again != "yes":
         print(f"Thank you for playing, {name}! Have a nice day!")
         return
+    if play_again == "yes":
+        print("--------------Game Start-------------------")
+        game_play()
 
 
 # Play the game
