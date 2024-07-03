@@ -24,7 +24,6 @@ def print_logo():
 ----------------------------------------------"""
     print(logo)
 
-
 def print_instruction():
     instruction = r"""
     ------------------------------------------------
@@ -186,10 +185,10 @@ def game_start():
                         guess_word[i] = guess
                 print("Correct!")
             else:
-                    live -= 1
-                    incorrectLetter.append(guess)
-                    print(Fore.RED+"Incorrect!")
-                    print(" " + Fore.RESET)
+                live -= 1
+                incorrectLetter.append(guess)
+                print(Fore.RED+"Incorrect!")
+                print(" " + Fore.RESET)
 
             # Game result
         if '_' not in guess_word:
