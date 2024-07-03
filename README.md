@@ -1,21 +1,32 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
-Welcome,
+## The Hangman Game
+The hangman game is to guess by the row of dashes representing each latter of the word, guess the countries by the dashes provided, the user must guess the random country within 6 try, 
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **May 14, 2024**
+The game is mixed of countries name around the world, 
 
-## Reminders
+The link can be found here - **https://the-hangman-game-b58499e0ed83.herokuapp.com/**
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+## How to play 
 
-## Creating the Heroku app
+- The player have 6 chances to guess a random letter base on the dashes provided 
+- If player guesses the correct word within 6 try they won the game
+- The player get a drawing of the Hangman if they guess the wrong word,
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Aim
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- Provied user with anapp that functions well and easy to use
+- To provide the user with good knowledge
+
+## Features
+
+# Title and start up 
+
+1. Welcome message as the site run and ask the user to enter 
+2. A display message text create using the Pyfiglet which takes ASCII text and renders it into ASCII art fonts
+
+![image](https://github.com/olaganiyu94/game-hang/assets/23237638/547944cc-b3c2-41be-b87e-3db958db5ea9)
+
 
 You must then create a _Config Var_ called `PORT`. Set this to `8000`
 
