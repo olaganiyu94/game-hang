@@ -168,10 +168,14 @@ def game_play():
     play_again = input("Do you want to play again? (yes/no):\n ").lower()
 
     if play_again != "yes":
-        print(pyfiglet.figlet_format(
-                "GOODBYE", justify="center", width=80))
-        print(f"Thank you for playing, {name}! Have a nice day!")
-        return
+        while true:
+            if play_again == "no":
+                print(pyfiglet.figlet_format(
+                        "GOODBYE", justify="center", width=80))
+                print(f"Thank you for playing, {name}! Have a nice day!")
+                return
+            else :
+                print("Please enter either (yes/no).")
     if play_again == "yes":
         print("--------------Game Start-------------------")
         game_play()
