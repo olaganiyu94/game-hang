@@ -3,6 +3,8 @@ import fontstyle
 import pyfiglet
 import pandas as pd
 import gspread
+import colorama
+from colorama import Fore, Style
 from google.oauth2.service_account import Credentials
 
 SCOPE = [
