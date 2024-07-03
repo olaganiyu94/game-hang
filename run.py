@@ -54,10 +54,9 @@ def word_choice(word2):
     allText = file.read() 
     words = list(map(str, allText.split())) 
     word2 =random.choice(words).lower()
+    # print random string   
     return word2
     # print random string 
-  
-
 # Function to display hangman
 def hangman(wrong):
     if wrong == 0:
