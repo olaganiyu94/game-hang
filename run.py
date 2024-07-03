@@ -33,21 +33,6 @@ def word_choice(word2):
     return word2
     # print random string 
   
-# def level(word, choice):
-#     option = word_choice(word)
-#     easy_choice = [word for word in option if len(word) <= 5]
-#     medium_choice = [word for word in option if 5 > len(word) <= 9]
-#     hard_choice = [word for word in option if len(word) > 10  ]
-#     print("level 1")
-#     print(easy_choice)
-#     print("level 2")
-#     print(medium_choice)
-#     print("level 3")
-#     print(hard_choice)
-
-# choice1=""
-# word1 =""
-# word5 = level(word1, choice1)  
 
 # Function to display hangman
 def hangman(wrong):
