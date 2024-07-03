@@ -1,4 +1,5 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![image](https://github.com/olaganiyu94/game-hang/assets/23237638/90940cd7-a87f-4ca1-b56b-f8f77c3d5fe5)
+
 
 ## The Hangman Game
 The hangman game is to guess by the row of dashes representing each latter of the word, guess the countries by the dashes provided, the user must guess the random country within 6 try, 
