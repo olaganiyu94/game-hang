@@ -29,7 +29,7 @@ The link can be found here - **https://the-hangman-game-b58499e0ed83.herokuapp.c
 ![image](https://github.com/olaganiyu94/game-hang/assets/23237638/547944cc-b3c2-41be-b87e-3db958db5ea9)
 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+While entering the name, a strong validation to make sure the player enter more than 1 letter, 
 
 If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 

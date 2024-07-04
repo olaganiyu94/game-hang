@@ -115,7 +115,8 @@ def validate_name(name):
     while True:
         name = input("Enter your name: ")
         if len(name) <= 1 or not name.isalpha():
-            print("Name must be more than 1 letter and cannot be a number")
+            print(Fore.RED+"Name must be more than 1 letter and cannot be a number")
+            print(" " + Fore.RESET)
             continue
         if name.strip():  # Check name if empty
             fore = Fore.BLUE + Style.BRIGHT
