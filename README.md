@@ -36,8 +36,22 @@ While entering the name, a strong validation to make sure the player enter more 
 a message appear in red to tell the user to input the correct details 
 ![alt text](image-1.png)
 
+# instruction message display
 
+- Display messages on how to play the game
+![alt text](image-3.png)
 
+# continue game play or exit game
+
+- if wrong input entered, an error message display 
+![alt text](image-2.png)
+
+# Game Play 
+
+- Game proceed and ask the user to fill in the blank 
+![alt text](image-4.png)
+- if user enter more than 1 letter or incorrect digit, a display message appear
+![alt text](image-5.png)
 If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
 Connect your GitHub repository and deploy as normal.
