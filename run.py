@@ -33,9 +33,11 @@ def print_instruction():
     -- Guess the random contry in 6 or less tries --
     --      Each guess must be a valid letter     --
     --                                            --
-    --     if guess wrong, live color changes     --
+    --       if guess wrong, 1 live Loose         --
+    --              live color change             --
     --                                            --
-    --                                            --
+    --       if guess all letter complete         --
+    --                You Win                     --
     --                                            --
     --                                            --
     --                 GOOD LUCK                  --

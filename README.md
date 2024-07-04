@@ -19,6 +19,9 @@ The link can be found here - **https://the-hangman-game-b58499e0ed83.herokuapp.c
 - Provied user with anapp that functions well and easy to use
 - To provide the user with good knowledge
 
+# Flow Chart
+![alt text](image.png)
+
 ## Features
 
 # Title and start up 
@@ -31,6 +34,8 @@ The link can be found here - **https://the-hangman-game-b58499e0ed83.herokuapp.c
 
 While entering the name, a strong validation to make sure the player enter more than 1 letter, 
 a message appear in red to tell the user to input the correct details 
+![alt text](image-1.png)
+
 
 
 If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
