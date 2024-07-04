@@ -52,14 +52,4 @@ a message appear in red to tell the user to input the correct details
 ![alt text](image-4.png)
 - if user enter more than 1 letter or incorrect digit, a display message appear
 ![alt text](image-5.png)
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!

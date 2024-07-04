@@ -1,5 +1,6 @@
 import random
 import fontstyle
+from datetime import date
 import pyfiglet
 import pandas as pd
 import gspread
@@ -47,7 +48,6 @@ def print_instruction():
     ------------------------------------------------
     """ 
     print(instruction)
-import random 
 # Open the file in read mode 
 
 def word_choice(word2):
@@ -149,10 +149,11 @@ def game_start():
     print_logo()
     name1 = ""
     name = validate_name(name1)
-    word1 =""
-    answer = word_choice(word1)
+    
     
     def game_play():
+        word1 =""
+        answer = word_choice(word1)
         if not answer:
             return
         print("--------------Game Start-------------------")
@@ -195,7 +196,10 @@ def game_start():
 
             # Game result
         if '_' not in guess_word:
-            print(f"Congratulations, {name}! You've guessed the word:", answer)
+            print(pyfiglet.figlet_format(
+                "Well Done", justify="center", width=60))
+
+            print(f"Congratulations! You've guessed the word:", answer)
             ("-------------------WELL DONE-------------------------")
         else:
             print("Game over, you lose! The word was:", answer)
@@ -208,12 +212,14 @@ def game_start():
             if play_again in no_check:
                 print(pyfiglet.figlet_format(
                 "GOODBYE", justify="center", width=80))
-                print(f"Thank you for playing, {name}! Have a nice day!")
+                print(" " + Fore.RESET)
+                print(f"Thank you for playing, Have a nice day!")
                 exit()
             if play_again is not yes_check and play_again is not no_check :
                 print(Fore.RED+"please enter the correct letter")
                 print(" " + Fore.RESET)
                 continue
-    game_play()
+  
+    game_play() 
 # Play the game
 game_start()
