@@ -1,6 +1,5 @@
 import random
 import fontstyle
-from datetime import date
 import pyfiglet
 import pandas as pd
 import gspread
