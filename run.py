@@ -16,11 +16,11 @@ SCOPE = [
 def print_logo():
     logo = r"""
  +---+
- |  |
- O  |
-/|\ |
-/ \ |
-    |
+ |   |
+ O   |
+/|\  |
+/ \  |
+     |
 ----------------------------------------------"""
     print(logo)
 
@@ -141,7 +141,7 @@ def validate_name(name):
             print(" " + Fore.RESET)   
 
 def game_start():
-    styled_text=pyfiglet.figlet_format('Welcome to Hangman !',font= 'doom')
+    styled_text=pyfiglet.figlet_format('Welcome to Hangman !',font= 'doom', width=60)
     print(styled_text)
     #print("Welcome to Hangman!")
     print_logo()
