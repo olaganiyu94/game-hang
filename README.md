@@ -7,6 +7,7 @@ The hangman game is to guess by the row of dashes representing each latter of th
 The game is mixed of countries name around the world, 
 
 The link can be found here - [Game-Hang](https://the-hangman-game-b58499e0ed83.herokuapp.com/)
+![alt text](images/image10.png)
 
 ## How to play 
 
@@ -20,7 +21,7 @@ The link can be found here - [Game-Hang](https://the-hangman-game-b58499e0ed83.h
 - To provide the user with good knowledge
 
 # Flow Chart
-![alt text](image.png)
+![alt text](images/image.png)
 
 ## Features
 
@@ -34,37 +35,37 @@ The link can be found here - [Game-Hang](https://the-hangman-game-b58499e0ed83.h
 
 While entering the name, a strong validation to make sure the player enter more than 1 letter, 
 a message appear in red to tell the user to input the correct details 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 # instruction message display
 
 - Display messages on how to play the game
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
 # continue game play or exit game
 
 - if wrong input entered, an error message display 
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 # Game Play 
 
 - Game proceed and ask the user to fill in the blank 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 - if user enter more than 1 letter or incorrect digit, a display message appear
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 - If user guess incorrect letter, an error of the incorrect letter is displayed and hangman build up
-![alt text](image-6.png)
+![alt text](images/image-6.png)
 - if user guess all letter correct, display message 
 
 - display message if the user decide not to play again 
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
 # Bug 
 - When running the Game in Heroku app, the game freeze if the user choose to quit the game after the instruction, 
-![alt text](image-7.png)
+![alt text](images/image-7.png)
 - while running the game through the [Gitpod](gitpod.io) terminal, the Game Terminate, 
 - With this i decided to write a message note to let the user know they will need to re-run the program to start again
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
 # Game Testing
 
