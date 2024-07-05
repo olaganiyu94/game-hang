@@ -199,9 +199,8 @@ def game_start():
 
             # Game result
         if '_' not in guess_word:
-            print(pyfiglet.figlet_format(
-                "Well Done", justify="center", width=60))
-
+            styled_text=pyfiglet.figlet_format('Well Done !',justify="center", width=60)
+            print(styled_text)
             print(f"Congratulations! You've guessed the word:", answer)
             ("-------------------WELL DONE-------------------------")
         else:
@@ -213,9 +212,8 @@ def game_start():
             if play_again in yes_check:
                 game_play()
             if play_again in no_check:
-                print(pyfiglet.figlet_format(
-                "GOODBYE", justify="center", width=80))
-                print(" " + Fore.RESET)
+                styled_text=pyfiglet.figlet_format('GOODBYE !',justify="center", width=60)
+                print(styled_text)
                 print(f"Thank you for playing, Have a nice day!")
                 print(Fore.BLUE + "Please Re-Run the Program to play again!")
                 print(" " + Fore.RESET)

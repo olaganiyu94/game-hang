@@ -61,9 +61,19 @@ a message appear in red to tell the user to input the correct details
 ![alt text](image-7.png)
 - while running the game through the [Gitpod](gitpod.io) terminal, the Game Terminate, 
 - With this i decided to write a message note to let the user know they will need to re-run the program to start again
+![alt text](image-8.png)
 
+# Game Testing
 
+- The game was tested thoroughly to ensure the following features worked as intended:
 
+- 1. A random word is selected each time a new game begins.
+- 2. The number of chances left reduces by one after each valid guess.
+- 3. The correct background colours are applied to the user's guess as per the game instructions.
+- 4. The game ends if the user has no turns left.
+- 5. The game ends if the user guesses correctly.
+- 6. The game give option if the user want to replay
+- 7. The game ends if the user chooses to end the game
 # Libraries and Technologies Used
 
 - random.choice is used to select a random word for the game from a text file.
