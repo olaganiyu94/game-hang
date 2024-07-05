@@ -54,7 +54,10 @@ a message appear in red to tell the user to input the correct details
 ![alt text](image-5.png)
 - If user guess incorrect letter, an error of the incorrect letter is displayed and hangman build up
 ![alt text](image-6.png)
+- if user guess all letter correct, display message 
 
+- display message if the user decide not to play again 
+![alt text](image-9.png)
 
 # Bug 
 - When running the Game in Heroku app, the game freeze if the user choose to quit the game after the instruction, 
@@ -121,4 +124,4 @@ a message appear in red to tell the user to input the correct details
 - Google Api 
 
 # Improvement 
-- Set up a date collection to store each user score in a spreadshot 
+- Set up a datebase to collect user scorecard  collection to store each user score in a spreadshot 
