@@ -165,7 +165,8 @@ def game_start():
         while live > 0 and '_' in guess_word:
             # Display current progress
             print(" ".join(guess_word))
-            print("Let Play: ", ", ".join(incorrectLetter))
+            print("Let Play: ",Fore.RED + ", ".join(incorrectLetter))
+            print(" " + Fore.RESET)
             hangman(6 - live)  # Display the hangman
             fore = Fore.YELLOW + Style.BRIGHT
             print(f"Tries left: {fore}{live}")
