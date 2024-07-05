@@ -131,12 +131,11 @@ def validate_name(name):
                     break
                 if play in no_check:
                     print(f"Thank you for playing, Have a nice day!")
-                    fore = Fore.BLUE + Style.BRIGHT
-                    fore_reset = Fore.RESET
-                    print({fore},"Please Re-Run the Program to play again!", {fore_reset})
+                    print(Fore.BLUE + "Please Re-Run the Program to play again!")
+                    print(" " + Fore.RESET)
                     exit()
                 if play is not yes_check and play is not no_check :
-                    print(Fore.RED+"please enter the correct letter!")
+                    print(Fore.RED+ "please enter the correct letter!")
                     print(" " + Fore.RESET)
                     continue
             break
@@ -218,8 +217,8 @@ def game_start():
                 "GOODBYE", justify="center", width=80))
                 print(" " + Fore.RESET)
                 print(f"Thank you for playing, Have a nice day!")
-                fore = Fore.BLUE + Style.BRIGHT
-                print({fore},"Please Re-Run the Program to play again!" + Fore.RESET)
+                print(Fore.BLUE + "Please Re-Run the Program to play again!")
+                print(" " + Fore.RESET)
                 exit()
             if play_again is not yes_check and play_again is not no_check :
                 print(Fore.RED+"please enter the correct letter")
