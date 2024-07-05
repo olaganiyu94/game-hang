@@ -132,7 +132,7 @@ def validate_name(name):
                 if play in no_check:
                     exit()
                 if play is not yes_check and play is not no_check :
-                    print(Fore.RED+"please enter the correct letter")
+                    print(Fore.RED+"please enter the correct letter!")
                     print(" " + Fore.RESET)
                     continue
             break
