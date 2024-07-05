@@ -178,7 +178,7 @@ def game_start():
                 continue
 
             if guess in guessLetter:
-                print("You've already guessed that letter.")
+                print("You've already guessed that letter. !")
                 continue
                 # Check if the guessed letter is in the word
             guessLetter.append(guess)
