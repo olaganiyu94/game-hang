@@ -171,7 +171,7 @@ def game_start():
             fore = Fore.YELLOW + Style.BRIGHT
             print(f"Tries left: {fore}{live}")
             print(" " + Fore.RESET)
-            guess = input("Guess a letter: \n").lower()
+            guess = input("Guess a letter: \n ").lower()
             # Validate the guess
             if len(guess) != 1 or not guess.isalpha():
                 print("Please enter a single letter.")

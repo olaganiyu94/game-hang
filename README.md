@@ -64,9 +64,9 @@ a message appear in red to tell the user to input the correct details
 - colorama - for adding colour to terminal text.
 
 # Programs Used ## miro.com
-- GitHub - used for version control.
-- Heroku - used to deploy the live project.
-- Grammerly - used to proof read the README.md
+- [GitHub](https://github.com/) - used for version control.
+- [Heroku](heroku.com/apps) - used to deploy the live project.
+- [FlowChart](miro.com)- used to create the game flowchart
 
 # Deployment 
 - The page was deployed via Heroku [Heroku](heroku.com/apps)  and link to page : [Game-Hang](https://the-hangman-game-b58499e0ed83.herokuapp.com/)
