@@ -52,6 +52,8 @@ a message appear in red to tell the user to input the correct details
 ![alt text](image-4.png)
 - if user enter more than 1 letter or incorrect digit, a display message appear
 ![alt text](image-5.png)
+- If user guess incorrect letter, an error of the incorrect letter is displayed and hangman build up
+![alt text](image-6.png)
 
 
 
@@ -63,7 +65,7 @@ a message appear in red to tell the user to input the correct details
 - pyfiglet - for taking ASCII text and rendering it into ASCII art fonts.
 - colorama - for adding colour to terminal text.
 
-# Programs Used ## miro.com
+# Programs Used
 - [GitHub](https://github.com/) - used for version control.
 - [Heroku](heroku.com/apps) - used to deploy the live project.
 - [FlowChart](miro.com)- used to create the game flowchart
