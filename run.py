@@ -131,7 +131,9 @@ def validate_name(name):
                     break
                 if play in no_check:
                     print(f"Thank you for playing, Have a nice day!")
-                    print(f"Please Re-Run the Program to play again!")
+                    fore = Fore.BLUE + Style.BRIGHT
+                    fore_reset = Fore.RESET
+                    print({fore},"Please Re-Run the Program to play again!", {fore_reset})
                     exit()
                 if play is not yes_check and play is not no_check :
                     print(Fore.RED+"please enter the correct letter!")

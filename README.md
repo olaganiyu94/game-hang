@@ -59,7 +59,9 @@ a message appear in red to tell the user to input the correct details
 # Bug 
 - When running the Game in Heroku app, the game freeze if the user choose to quit the game after the instruction, 
 ![alt text](image-7.png)
--while running the game through the Gitpod terminal, no issue att all 
+- while running the game through the [Gitpod](gitpod.io) terminal, the Game Terminate, 
+- With this i decided to write a message note to let the user know they will need to re-run the program to start again
+
 
 
 # Libraries and Technologies Used
