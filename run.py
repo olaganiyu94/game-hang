@@ -218,7 +218,8 @@ def game_start():
                 "GOODBYE", justify="center", width=80))
                 print(" " + Fore.RESET)
                 print(f"Thank you for playing, Have a nice day!")
-                print(f"Please Re-Run the Program to play again!")
+                fore = Fore.BLUE + Style.BRIGHT
+                print({fore},"Please Re-Run the Program to play again!" + Fore.RESET)
                 exit()
             if play_again is not yes_check and play_again is not no_check :
                 print(Fore.RED+"please enter the correct letter")
