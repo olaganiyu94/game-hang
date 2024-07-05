@@ -56,6 +56,11 @@ a message appear in red to tell the user to input the correct details
 ![alt text](image-6.png)
 
 
+# Bug 
+- When running the Game in Heroku app, the game freeze if the user choose to quit the game after the instruction, 
+![alt text](image-7.png)
+-while running the game through the Gitpod terminal, no issue att all 
+
 
 # Libraries and Technologies Used
 

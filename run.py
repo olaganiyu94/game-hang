@@ -130,6 +130,10 @@ def validate_name(name):
                 if play in yes_check:
                     break
                 if play in no_check:
+                    print(pyfiglet.figlet_format(
+                    "GOODBYE", justify="center", width=80))
+                    print(" " + Fore.RESET)
+                    print(f"Thank you for playing, Have a nice day!")
                     exit()
                 if play is not yes_check and play is not no_check :
                     print(Fore.RED+"please enter the correct letter!")
